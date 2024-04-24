@@ -1,0 +1,12 @@
+{
+  "name": "lint-configuration-creator",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Logan Tang <ho_ho_gl@hotmail.com>",
+  "license": "MIT"
+}
