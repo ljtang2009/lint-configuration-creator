@@ -39,7 +39,7 @@
     "@commitlint/config-conventional": "^19.1.0",
     "@inquirer/core": "^9.0.7",
     "@inquirer/prompts": "^5.3.4",
-    "@ljtang2009/lint-configuration": "workspace:*",
+    "@ljtang2009/lint-configuration": "workspace:^1.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/figlet": "^1.5.8",
