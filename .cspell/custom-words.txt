@@ -1,7 +1,9 @@
 codecov
-desm
 Gitee
 iife
+memfs
+multirepo
+Multirepo
 redeclaration
 tseslint
 unspaced
