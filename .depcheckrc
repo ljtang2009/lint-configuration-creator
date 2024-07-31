@@ -1,0 +1,14 @@
+ignores: [
+  "stylelint-config-clean-order",
+  "stylelint-prettier",
+  "@commitlint/*",
+  "@semantic-release/*",
+  "@vitest/coverage-v8",
+  "caniuse-lite",
+  "cspell",
+  "cz-git",
+  "lint-staged",
+  "node-notifier",
+  "tslib"
+]
+ignore-patterns: ['templates']

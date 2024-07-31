@@ -1,10 +1,10 @@
 import globals from 'globals';
 import { eslint, disableDuplicatedRules } from '@ljtang2009/lint-configuration';
 import _ from 'lodash';
-import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import path from 'node:path';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const baseConfig = _.merge(
   _.cloneDeep(eslint.buildIn.default),
@@ -34,48 +34,19 @@ let config = [
       ignores: [
         'dist/**/*',
         'coverage/**/*',
-        'bin/**/*',
+        'packages/**/*',
       ],
     }),
-  },
-  {
-    name: 'ts/src',
-    ..._.merge(_.cloneDeep(baseTSConfig), {
-      files: ['src/**/*.ts'],
-      ignores: ['src/**/*.spec.ts'],
-      languageOptions: {
-        parserOptions: {
-          project: join(__dirname, 'tsconfig.json'),
-          tsconfigRootDir: __dirname,
-        },
-      },
-      rules: {
-        'no-console': ['off'],
-      },
-    }),
-  },
-  {
-    name: 'ts/test',
-    ..._.merge(_.cloneDeep(baseTSConfig), {
-      files: ['test/**/*.spec.ts', 'test/**/*.test.ts'],
-      languageOptions: {
-        parserOptions: {
-          project: join(__dirname, 'tsconfig.json'),
-          tsconfigRootDir: __dirname,
-        },
-      },
-    }, eslint.jest.default),
   },
   {
     name: 'ts/root',
     ..._.merge(_.cloneDeep(baseTSConfig), {
       files: [
         '*.ts',
-        'scripts/**/*.ts',
       ],
       languageOptions: {
         parserOptions: {
-          project: join(__dirname, 'tsconfig.node.json'),
+          project: path.join(__dirname, 'tsconfig.node.json'),
           tsconfigRootDir: __dirname,
         },
       },
@@ -88,7 +59,7 @@ let config = [
       ignores: [
         'coverage/**/*',
         'package.json',
-        '.vscode/**/*',
+        'packages/**/*',
       ],
     }),
   },

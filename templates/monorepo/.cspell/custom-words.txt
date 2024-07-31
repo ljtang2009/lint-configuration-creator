@@ -1,11 +1,9 @@
 codecov
 Gitee
 iife
-memfs
-multirepo
-Multirepo
+pnpx
 redeclaration
-SNYK
+snyk
 tseslint
 unspaced
 vitepress

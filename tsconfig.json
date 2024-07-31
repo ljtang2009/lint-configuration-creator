@@ -1,9 +1,10 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "./tsconfig.production.json",
   "compilerOptions": {
-    // Emit
-    "outDir": "dist"
+    // Interop Constraints
+    "verbatimModuleSyntax": false
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.spec.ts"]
+  "include": ["src", "test", "demo"],
+  "exclude": ["src/templates"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
