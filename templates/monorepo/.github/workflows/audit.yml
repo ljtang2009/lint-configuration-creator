@@ -1,0 +1,29 @@
+name: 👮 Audit
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  Audit:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm
+
+      - name: Audit
+        run: |
+          pnpm audit-dep:ci
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

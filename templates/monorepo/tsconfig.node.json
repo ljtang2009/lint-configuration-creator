@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Modules
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+
+    // Language and Environment
+    "target": "esnext",
+
+    // Emit
+    "emitDeclarationOnly": true,
+
+    // Projects
+    "composite": true
+  },
+  "include": ["*.ts"]
+}

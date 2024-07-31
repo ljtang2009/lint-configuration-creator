@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.production.json",
+  "compilerOptions": {
+    // Interop Constraints
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src", "test", "demo"],
+  "exclude": ["src/templates"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

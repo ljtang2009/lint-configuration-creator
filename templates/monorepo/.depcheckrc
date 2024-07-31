@@ -1,0 +1,9 @@
+ignores: [
+  "@commitlint/*",
+  "@semantic-release/*",
+  "cspell",
+  "cz-git",
+  "lint-staged",
+  "prettier",
+  "vitest"
+]

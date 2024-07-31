@@ -1,0 +1,7 @@
+codecov
+Gitee
+iife
+redeclaration
+tseslint
+unspaced
+vitepress

@@ -1,0 +1,36 @@
+name: 🧪 Test
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+
+# Cancel prev CI if new commit come
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  Test:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup pnpm environment
+        uses: ./.github/actions/setup-pnpm
+
+      - name: Test
+        run: |
+          pnpm test:ci
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: ljtang2009/lint-configuration
+          files: ./coverage/coverage-final.json
