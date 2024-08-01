@@ -7,8 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const workspaceConfig = parseJson(
   fs.readFileSync(
-    // TODO rename To_Rename.code-workspace to your workspace name
-    path.resolve(__dirname, '../../.vscode/To_Rename.code-workspace'),
+    path.resolve(__dirname, '../../.vscode/{{projectName}}.code-workspace'),
     'utf8',
   ),
 );

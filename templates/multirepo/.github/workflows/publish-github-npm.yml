@@ -1,4 +1,4 @@
-name: 📢 Publish to GitHub
+name: 📢 Publish to GitHub And NPM
 
 on:
   push:
@@ -26,7 +26,10 @@ jobs:
         env:
           # TODO 获取 github token: https://github.com/settings/tokens
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # TODO 获取 npm token: https://www.npmjs.com/settings/~/tokens
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           # @see https://typicode.github.io/husky/how-to.html#ci-server-and-docker
           HUSKY: 0
         run: |
+          pnpm run build
           pnpm run release
