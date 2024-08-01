@@ -55,6 +55,8 @@ export default async (answers: Answers, templateInfo: TemplateInfo) => {
       // 移除文件路径中的.hbs后缀
       newFilePath = newFilePath.substring(0, filePath.length - 4);
     }
+    // 使用Handlebars编译并渲染路径
+    newFilePath = Handlebars.compile(newFilePath)(answers);
     // 构建文件在项目目录中的完整路径
     const wholeFilePath = path.resolve(answers.projectDir, newFilePath);
     // 确保文件目录存在
