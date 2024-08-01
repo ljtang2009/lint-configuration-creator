@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/ljtang2009/lint-configuration-creator/compare/v1.0.0...v1.1.0) (2024-08-01)
+
+
+### Features
+
+* :sparkles: render template file path ([46688e1](https://github.com/ljtang2009/lint-configuration-creator/commit/46688e1f5115e5afc5beefb465514f32ea5234c5))
+* :sparkles: update tempate ([7c209b9](https://github.com/ljtang2009/lint-configuration-creator/commit/7c209b963c7d5b5019c2b488073f0fd42fb85c0f))
+
+
+### Performance Improvements
+
+* :zap: optimize lint ([9a7c832](https://github.com/ljtang2009/lint-configuration-creator/commit/9a7c8324642bdc486bfd2f8fa22b0fd290328e1f))
+
 # [1.0.0](https://github.com/ljtang2009/lint-configuration-creator/compare/v0.0.1...v1.0.0) (2024-07-31)
 
 
