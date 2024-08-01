@@ -1,0 +1,7 @@
+ignores: [
+  "@commitlint/*",
+  "@semantic-release/*",
+  "@vitest/coverage-v8",
+  "cspell",
+  "cz-git",
+]

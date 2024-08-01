@@ -1,0 +1,76 @@
+{
+  "name": "{{projectName}}",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky",
+    "cm": "git-cz",
+    "release": "semantic-release",
+    "build": "rm -rf dist && tsc --project tsconfig.production.json && vite build",
+    "lint": "pnpm lint:eslint && pnpm lint:markdown && pnpm lint:cspell",
+    "lint:eslint": "eslint .",
+    "lint:eslint:view": "pnpx @eslint/config-inspector",
+    "lint:eslint:fix": "time eslint --fix .",
+    "lint:markdown": "markdownlint-cli2",
+    "lint:cspell": "cspell lint --show-context  --show-suggestions .",
+    "test": "vitest watch",
+    "test:ci": "vitest run",
+    "test:ui": "vitest --ui",
+    "audit-dep": "pnpm audit && snyk auth && snyk test",
+    "audit-dep:ci": "pnpm audit && snyk test",
+    "check-updates": "npx depcheck && npx npm-check-updates --interactive --format group"
+  },
+  "keywords": [],
+  "author": "",
+  "homepage": "",
+  "bugs": {
+    "url": "",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usenname/projectname.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@eslint/config-inspector": "^0.4.8",
+    "@ljtang2009/lint-configuration": "^1.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.12.10",
+    "@vitest/coverage-v8": "^2.0.1",
+    "@vitest/ui": "^2.0.1",
+    "commitizen": "^4.3.0",
+    "cspell": "^8.7.0",
+    "cz-git": "^1.9.1",
+    "depcheck": "^1.4.7",
+    "eslint": "^8.57.0",
+    "globals": "^15.0.0",
+    "husky": "^9.0.11",
+    "lodash": "^4.17.21",
+    "markdownlint-cli2": "^0.13.0",
+    "only-allow": "^1.2.1",
+    "semantic-release": "^23.0.8",
+    "snyk": "^1.1292.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.8",
+    "vitest": "^2.0.1"
+  }
+}

@@ -1,6 +1,7 @@
 codecov
 Gitee
 iife
+pnpx
 redeclaration
 tseslint
 unspaced

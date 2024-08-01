@@ -7,8 +7,7 @@
     "package.json",
     "**/*.psd",
     "CHANGELOG.md",
-    "templates/**/*",
-    "packages/**/*"
+    ".vscode/**/*"
   ],
   "enableGlobDot": true,
   "useGitignore": true,

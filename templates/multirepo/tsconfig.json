@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.production.json",
+  "compilerOptions": {
+    // Interop Constraints
+    "verbatimModuleSyntax": false
+  },
+  "include": ["src", "test"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

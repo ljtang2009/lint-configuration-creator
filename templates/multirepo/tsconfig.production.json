@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Modules
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowImportingTsExtensions": true,
+    // Emit
+    "outDir": "dist",
+    "emitDeclarationOnly": true,
+    // Language and Environment
+    "jsx": "react"
+  },
+  "include": ["src"]
+}

@@ -31,6 +31,8 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
+          # TODO 获取 codecov token: https://app.codecov.io/
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: ljtang2009/lint-configuration-creator
+          # TODO 获取 codecov slug: https://app.codecov.io/
+          slug: codecov-username/codecov-projectname
           files: ./coverage/coverage-final.json

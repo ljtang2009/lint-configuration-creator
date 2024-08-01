@@ -1,0 +1,22 @@
+name: Setup pnpm environment
+
+description: setup pnpm environment and intall dependencies.
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set pnpm version
+      uses: pnpm/action-setup@v3
+      with:
+        version: 'latest'
+        run_install: false
+
+    - name: Set node version
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'latest'
+
+    - name: Install
+      shell: bash
+      run: |
+        pnpm install

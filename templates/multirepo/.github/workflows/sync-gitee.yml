@@ -25,4 +25,3 @@ jobs:
         with:
           source-repo: git@github.com:[github_repository_owner]/[github_repository_name]
           destination-repo: git@gitee.com:[gitee_repository_owner]/[gitee_repository_name]
-
